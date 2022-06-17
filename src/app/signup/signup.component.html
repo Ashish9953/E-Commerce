@@ -1,0 +1,148 @@
+ <div style="background-color: skyblue;width: 100%;height:900px;margin-top: -5%;background-image:url(../assets/images/signup.jpg);" ></div>
+<div  class="container">
+  <div class="row">
+    <div class="col-md-6 column">
+      <div class="card">
+        <div class="text-center">
+          <h1 style="color: black">Register</h1>
+          <h6 style="color: brown">Please enter your Credential!!</h6>
+           <span style="color:red;font-size: 15px;" *ngIf="showMsg==true">Email Already in Used  <a style="font-size: 15px;" routerLinkActive="active" routerLink="/signUp"
+            >go to login</a
+          ></span>
+
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="postCustomer()">
+          <div class="form-group">
+            <label for="examplefirstName">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="examplefirstName"
+              placeholder="first  name"
+              formControlName="firstName"
+              
+            />
+            <span class="text-danger" *ngIf="signupForm.controls['firstName'].touched && signupForm.hasError('required','firstName')">*First Name is required</span>
+          </div>
+          <div class="form-group">
+            <label for="examplelastName">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="examplelastName"
+              placeholder="last name"
+              formControlName="lastName"
+            />
+            <span class="text-danger" *ngIf="signupForm.controls['lastName'].touched && signupForm.hasError('required','lastName')">*Last Name is required</span>
+          </div>
+          <div class="form-group">
+            <label for="examplelnumber">Phone Number</label>
+            <input
+              type="number"
+              class="form-control"
+              id="examplelnumber"
+              placeholder="phone Number"
+              formControlName="number"
+            />
+            <div *ngIf="signupForm.controls['number'].touched && signupForm.controls['number'].invalid" class="text-danger">  
+              <div *ngIf="signupForm.hasError('required','number')">*Mobile Number is required.</div>  
+              <div *ngIf="signupForm.hasError('pattern','number')">*Please, Enter 10 digit Mobile Number.</div>  
+          </div>  
+
+
+
+
+            <!-- <span class="text-danger number"  *ngIf="signupForm.controls['number'].touched && signupForm.hasError('required','number')">*Phone number is required</span> 
+            <div  class="text-danger number" *ngIf="signupForm.controls['number'].errors && signupForm.controls['number'].dirty">Please, Enter 10 digit Mobile Number.</div>   -->
+          </div>
+             
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+              formControlName="email"
+            />
+            <div *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].invalid" class="text-danger">  
+              <div *ngIf="signupForm.hasError('required','email')">*Email is required.</div>  
+              <div *ngIf="signupForm.hasError('pattern','email')">*Please, Enter correct Email</div>  
+          </div>  
+            <!-- <span class="text-danger" *ngIf="signupForm.controls['email'].touched && signupForm.hasError('required','email')"> *Email  is required</span> -->
+          </div>
+          <div  class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              formControlName="password"
+            />
+            <div *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].invalid" class="text-danger">  
+              <div *ngIf="signupForm.hasError('required','password')">*Password is required.</div>  
+                
+              <div *ngIf="signupForm.hasError('pattern','password')"><ul><li>Password must be 8 charcater</li>
+                <li>password must contain 1 uppercase letter</li>
+                <li>password must contain 1 lowecase letter</li>
+                <li>password must contain 1 special letter</li>
+                <li>password must contain 1 digit letter</li></ul>
+              </div>  
+          </div>  
+
+
+
+
+            <span class="text-danger" *ngIf="signupForm.controls['password'].touched && signupForm.hasError('required','password')">*Password is required</span>
+          </div>
+          <div class="form-group">
+            <label for="examplelocation">Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="examplelocation"
+              placeholder="Address"
+              formControlName="address"
+            />
+            <span class="text-danger" *ngIf="signupForm.controls['address'].touched && signupForm.hasError('required','location')">*Location is required</span>
+          </div>
+           
+           <div class="form-group">
+            <label >Role</label>
+           <input type="text" class="form-control"  list="datalist1"  formControlName="Role"  placeholder="Role">
+           <datalist id="datalist1">
+                <option >
+                    admin
+                </option>
+                <option>user</option>
+           </datalist>
+           </div>
+           <br>
+              
+          <div >
+            <form action="">
+            <label for="exampleadmin">Enter admin key please</label>
+            <input
+              type="password"
+              class="form1"
+              id="exampleadmin"
+              name="admin"
+              placeholder="Only if Role is admin"
+              [(ngModel)]="adminkey"
+              style="margin-left: 10px;height: 30px;border-radius: 10px;"
+            />
+            </form>
+            
+          </div>
+          <br />
+          <button type="submit" [disabled]="!signupForm.valid" class="btn btn-primary ">Register Now</button>
+        </form>
+        <a style="color: black; margin-top: 10px" routerLink="/login"
+          >Already Registered?click to Login!!</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

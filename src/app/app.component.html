@@ -1,0 +1,350 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+
+    <!-- <a class="navbar-brand" href="#" style="text-align: center;">
+      
+       
+      DeepKart
+    </a> -->
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">DeepKart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+     
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item ">
+        <a class="nav-link" routerLinkActive="active" routerLink="/home"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/about"
+          >About</a
+        >
+      </li>
+      <li *ngIf="api.adminlogin==true" class="nav-item" >
+        <a class="nav-link" routerLinkActive="active" routerLink="/user"
+          >User Display</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/products" 
+          >Electronics</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/contact"
+          >Contact</a
+        >
+      </li>
+      </ul>
+      <div class="d-flex mx-5">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+      <li class="nav-item" *ngIf="api.show==false">
+     
+        <a  class="nav-link"  routerLinkActive="active" routerLink="/login"
+          > <i class="fa fa-sign-in" aria-hidden="true" style="margin-right: 5px;" ></i>Login</a
+        >
+       </li >
+       <li class="nav-item dropdown" *ngIf="api.show==true" style="margin-top: 5px;margin-right: 30px;border-radius: 5px;cursor: pointer;">
+        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="user" style="font-size: 15px;">
+            
+            &nbsp;{{api.user.firstName}}  <i class="fas fa-caret-down down"></i><i class="fas fa-caret-up up"></i></span>
+        </a>
+        <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+           <li class="square"></li>
+          <li style="border-bottom: 1px solid #B5B7BD ;padding:  5px 0px 5px 0px;"><a class="dropdown-item" style="background-color: inherit;"  routerLinkActive="active" routerLink="account"><i class="fa fa-user" aria-hidden="true" style="margin-right: 10px;" ></i>My Profile </a></li>
+          
+          <li style="border-bottom: 1px solid #B5B7BD ;padding:  5px 0px 10px 0px;"><a class="dropdown-item" href="#"><i class="fa fa-first-order" aria-hidden="true"  style="margin-right: 10px;" ></i>Orders</a></li>
+          
+          <li> <a class="dropdown-item" (click)="logOutForAuthGuard()" href="#" style="margin-top: 5px;"
+            ><i class="fa fa-sign-out" aria-hidden="true" style="margin-right: 10px;"></i>LogOut</a
+          ></li>
+        </ul>
+      </li>
+
+      
+
+      <li class="nav-item" *ngIf="api.show==false">
+        
+        <a class="nav-link" routerLinkActive="active" routerLink="/signUp"
+          > <i class="fas fa-user-plus" style="margin-right: 5px;"></i>signup</a
+        >
+      </li>
+      <li *ngIf="api.show == true && api.role=='user'">
+        <!-- <button  class="btn btn-success"> -->
+          <a routerLink="cart">
+          <i style="font-size: 30px;color:green;margin-top: 5px;" class="fas fa-cart-plus"></i>
+          <div style="font-size: 10px;" class="badge bg-danger">{{this.cartService.cartlength}}</div>
+          </a>
+     </li>
+      <li *ngIf="api.show == true"  >
+        
+       
+      </li>
+       
+    </ul>
+      </div>
+      
+   
+  </div>
+    </div>
+</nav>
+<br />
+
+
+    
+ 
+
+
+
+
+
+
+
+  <!-- <form action="">
+    <mat-form-field>
+      <input type="text" matInput [matAutoComplete]="auto" />
+      <mat-autocomplete #auto="matAutoComplete"> 
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option}}
+
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form> -->
+
+
+
+
+<!-- <a href="#" (click)="logInForAuthGuard()">Login</a><br><br>
+<a href="#" (click)="logOutForAuthGuard()">Logout</a><br><br> -->
+<router-outlet></router-outlet>
+
+<footer class="footer1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg">
+        <p class="footer-head" style="padding-top:10px">DeepKart: The One-stop Shopping Destination</p>
+        <p class="footer-para">
+          E-commerce is revolutionizing the way we all shop in India. Why do you
+          want to hop from one store to another in search of the latest phone
+          when you can find it on the Internet in a single click? Not only
+          mobiles. Flipkart houses everything you can possibly imagine, from
+          trending electronics like laptops, tablets, smartphones, and mobile
+          accessories to in-vogue fashion staples like shoes, clothing and
+          lifestyle accessories; from modern furniture like sofa sets, dining
+          tables, and wardrobes to appliances that make your life easy like
+          washing machines, TVs, ACs, mixer grinder juicers and other
+          time-saving kitchen and small appliances; from home furnishings like
+          cushion covers, mattresses and bedsheets to toys and musical
+          instruments, we got them all covered. You name it, and you can stay
+          assured about finding them all here. For those of you with erratic
+          working hours, Flipkart is your best bet. Shop in your PJs, at night
+          or in the wee hours of the morning. This e-commerce never shuts down.
+          What's more, with our year-round shopping festivals and events, our
+          prices are irresistible. We're sure you'll find yourself picking up
+          more than what you had in mind. If you are wondering why you should
+          shop from Flipkart when there are multiple options available to you,
+          well, the below will answer your question.
+        </p>
+        <br />
+        <p class="footer-head">No Cost EMI</p>
+        <p class="footer-para">
+          In an attempt to make high-end products accessible to all, our No Cost
+          EMI plan enables you to shop with us under EMI, without shelling out
+          any processing fee. Applicable on select mobiles, laptops, large and
+          small appliances, furniture, electronics and watches, you can now shop
+          without burning a hole in your pocket. If you've been eyeing a product
+          for a long time, chances are it may be up for a no cost EMI. Take a
+          look ASAP! Terms and conditions apply.
+        </p>
+        <p class="footer-head">Electronic Devices and Accessories</p>
+        <p class="footer-para">
+          When it comes to laptops, we are not far behind. Filter among dozens
+          of super-fast operating systems, hard disk capacity, RAM, lifestyle,
+          screen size and many other criterias for personalized results in a
+          flash. All you students out there, confused about what laptop to get?
+          Our Back To College Store segregates laptops purpose wise (gaming,
+          browsing and research, project work, entertainment, design,
+          multitasking) with recommendations from top brands and industry
+          experts, facilitating a shopping experience that is quicker and
+          simpler. <br />
+          Photography lovers, you couldn't land at a better page than ours.
+          Cutting-edge DSLR cameras, ever reliable point-and-shoot cameras,
+          millennial favourite instant cameras or action cameras for adventure
+          junkies: our range of cameras is as much for beginners as it is for
+          professionals. Canon, Nikon, GoPro, Sony, and Fujifilm are some big
+          names you'll find in our store. <br />
+          Photography lovers, you couldn't land at a better page than ours.
+          Cutting-edge DSLR cameras, ever reliable point-and-shoot cameras,
+          millennial favourite instant cameras or action cameras for adventure
+          junkies: our range of cameras is as much for beginners as it is for
+          professionals. Canon, Nikon, GoPro, Sony, and Fujifilm are some big
+          names you'll find in our store. Turn your home into a theatre with a
+          stunning surround sound system. Choose from our elaborate range of
+          Sony home theatres, JBL soundbars and Philips tower speakers for an
+          experience to remember. <br />
+          How about jazzing up your phone with our quirky designer cases and
+          covers? Our wide-ranging mobile accessories starting from headphones,
+          power banks, memory cards, mobile chargers, to selfie sticks can prove
+          to be ideal travel companions for you and your phone; never again
+          worry about running out of charge or memory on your next vacation.
+        </p>
+        <p class="footer-head">Large Appliances</p>
+        <p class="footer-para">
+          Sleek TVs, power-saving refrigerators, rapid-cooling ACs, resourceful
+          washing machines - discover everything you need to run a house under
+          one roof. Our Dependable TV and Appliance Store ensures zero transit
+          damage, with a replacement guarantee if anything goes wrong; delivery
+          and installation as per your convenience and a double warranty
+          (Official Brand Warranty along with an extended Flipkart Warranty) -
+          rest assured, value for money is what is promised and delivered. Shop
+          from market leaders in the country like Samsung, LG, Whirlpool, Midea,
+          Mi, Vu, Panasonic, Godrej, Sony, Daikin, and Hitachi among many
+          others.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="https://www.facebook.com/mtxb2b/" target="_blank" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/mtx_inc?lang=en"  target="_blank" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href=" https://www.mtxb2b.com/s/" target="_blank" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="https://www.instagram.com/mtxinc/?hl=en" target="_blank" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://in.linkedin.com/company/mtx-group" target="_blank" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/Ashish9953" target="blank" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>DeepKart
+          </h6>
+          <p>
+            DeepKart Internet Private Limited,
+
+            Buildings Alyssa, Begonia &
+            
+            Uttam Nager  Village,
+            
+            Outer Ring Road, Vikas Nagar Village,
+            
+           Delhi, 110059,
+            
+            Delhi, India
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">TV</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Mobile</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laptop</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Camera</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a routerLinkActive="active" routerLink="/about"  class="text-reset  pointer" >AboutUs</a>
+          </p>
+          <p>
+            <a routerLinkActive="active" routerLink="/products"class="text-reset pointer">Products</a>
+          </p>
+          <p>
+            <a  routerLinkActive="active" routerLink="/contact" class="text-reset  pointer">Contacts</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset  pointer">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 ">
+            Contact
+          </h6>
+          <p class=" pointer"><i class="fas fa-home me-3 r"></i> New Delhi, ND 110059, IN</p>
+          <p class=" pointer">
+            <i class="fas fa-envelope me-3  "></i>
+            admin@deepKart.com
+          </p>
+          <p class=" pointer"><i class="fas fa-phone me-3 "></i> (+91)-8327673536</p>
+          
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    Copyright &copy; 2021 DeepKart Inc. All rights reserved.
+    
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->

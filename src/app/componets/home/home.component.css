@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=M+PLUS+Code+Latin&family=Pacifico&family=Poppins:wght@400;500&family=Yuji+Mai&display=swap');
+
+
+.div1
+{
+    
+    font-size: 20px;
+   
+   padding-top: 10px;
+  padding-bottom: 10px;
+    
+    
+}
+.div2
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.cat1
+{
+    height: 64px;width: 64px;
+    text-align: center;
+    margin-top:10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card{
+    border: none;
+}
+.card1
+{
+    height: 150px;
+    width: auto;
+    transition: 0.3s ease-in-out;
+}
+
+.card1:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.card-body1
+{
+    width:100%;
+    font-size: 14px;
+    font-weight: 600;
+    overflow:hidden;
+    height:50px;
+    line-height:50px;
+    margin-top: -20px;
+}
+.card-text
+{
+    margin-top: -20px;
+    font-size: 14px;
+    font-weight: 500;
+   
+}
+.card-text1
+{
+    margin-top: -10px;
+    font-size: 14px;
+    font-weight: 500;
+    
+}

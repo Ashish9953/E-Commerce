@@ -1,0 +1,57 @@
+<div
+  style="background-color: skyblue; width: 100%; height: 600px;background-image: url(../assets/images/signup.jpg); margin-top: -5%"
+></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1 style="color: black">Welcome Back!</h1>
+          <h6 style="color: brown">Please enter your Credential!!</h6>
+          <p *ngIf="showPara==true" style="color: red; font-size: 20px">We cannot find an account with that email address & password</p>
+        </div>
+        
+        <form [formGroup]="loginForm" (ngSubmit)="loginCustomer()">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+              formControlName="email"
+            />
+
+            <div *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].invalid" class="text-danger">  
+              <div *ngIf="loginForm.hasError('required','email')">*Email is required.</div>  
+              <div *ngIf="loginForm.hasError('pattern','email')">*Please, Enter correct Email</div>  
+          </div>  
+           <!-- <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')"> *Email  is required</span> -->
+            <br />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              formControlName="password"
+            />
+            <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</span>
+         
+          </div>
+          <br />
+          <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>
+        </form>
+        <a style="color: black; margin-top: 10px" routerLink="/forget"
+          >Forget Password?click to Reset!</a
+        >
+        <a style="color: black; margin-top: 10px" routerLink="/signUp"
+          >New to Deepkart?click to signUp!!</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

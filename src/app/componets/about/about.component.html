@@ -1,0 +1,235 @@
+<h2 style="margin-left: 100px">ABOUT DEEPKART</h2>
+<br />
+
+<!-- about Deepkart -->
+<div class="container" style="margin-bottom: 5px">
+  <div class="row">
+    <div
+      class="col-lg-3"
+      style="background-color: cornsilk; border-radius: 10px"
+    >
+      <div class="row" style="padding: 70px;">
+        <div class="col-lg-12 " (click)="changeAbout()"><p class="about pointer">About DeepKart</p></div>
+        <div class="col-lg-12 " (click)="changeNews()"><p class="about pointer">News and Media</p></div>
+        <div class="col-lg-12 "  (click)="changeComp()"><p class="about pointer">Company Information</p></div>
+      </div>
+    </div>
+
+    <div
+      class="col-lg offset-1"
+      style="background-color: cornsilk; border-radius: 10px"
+    >   
+      <div *ngIf="about==true" style="padding: 30px">
+        <img
+          src="../assets/images/about.jpg"
+          class="img-fluid"
+          alt="employee"
+        />
+        <br />
+        <br />
+        <p style="text-align: justify">
+          <img
+            src="../assets/images/about2.png"
+            alt="about2"
+            style="float: left; margin-right: 20px"
+          />
+          Launched in 2021, DeepKart is the first one-of-its kind large format
+          specialist retail store that catered to all multi-brand digital
+          gadgets and home electronic needs in India. Over a decade since its
+          inception, Deepkart has almost become synonyms for all electronics
+          needs and gadgets, We have all the products which is required for a
+          smart home with very excited price and offers. with its tech-savvy
+          staff, product range, Staged presence and the will to help customers.
+        </p>
+        <br />
+        <p style="text-align: justify">
+          <img
+            src="../assets/images/about3.jpg"
+            alt="about2"
+            style="float: right; margin-left: 20px; width: 200px; height: 150px"
+          />
+          Bringing alive the promise of a ‘Brighter Every Day’ for its
+          customers, DeepKart offers its customers a world-class ambience to
+          shop both in-store and Staged at www.deepkart.com and also allows for
+          a seamless ‘omni-channel’ shopping experience that lets a customer
+          enjoy the best of both the Staged & the offline worlds. With over 6000
+          products across 200 brands and 150+ stores across 40+ major cities of
+          India, Croma ensures that for each customer, a Brighter Tomorrow
+          begins Today! From the newlywed couple setting up their house to the
+          son reducing his mother’s burden with a washing machine; from the
+          daughter gifting her parents a new LED TV to the newly promoted
+          manager buying an inverter air-conditioner to make the summer
+          bearable, DeepKart ensures that customers always get ‘More for their
+          money’!
+        </p>
+        <br />
+        <p style="text-align: justify">
+          <img
+            src="../assets/images/about4.png"
+            alt="about2"
+            style="float: left; margin-right: 20px"
+          />
+          With this intent to delight customers all along, Croma launched its
+          own label products in 2008. Brand Croma stands for – Life, More
+          Beautiful; the promise is based not just on the beauty in the way they
+          look but also the value they offer to a customer’s life. The range is
+          a perfect fit, for those who desire a completely feature-packed and
+          quality product.
+        </p>
+        <br /><br />
+        <br /><br />
+        <p
+          style="
+            text-align: center;
+            font-size: 15px;
+            text-decoration: underline;
+          "
+        >
+          About DEEPKART Group
+        </p>
+        <p style="text-align: justify;">
+          The Deepkart Group, a global enterprise, was founded in 2021 by Sir
+          AK Choudhary. The group, with its headquarters in delhi, encompasses
+          30 primary business sectors across 10 verticals. With operations in
+          over 100 countries across continents, Deepkart Group is determined to
+          serve with the mission “'to improve the quality of life of the
+          communities we serve globally, through long-term stakeholder value
+          creation based on Leadership with Trust”. Standing strong to its
+          mission, the Deepkart Group has not just established but also financed
+          various institutions for researches, education & cultural enrichment <br>
+          Each company under the Brand Deepkart operates under the expertise of its
+          own board of directors. With a collective employee strength of over
+          7,20,000, the group has around 28 publicly-listed companies. Some
+          major companies under the group are Indian Hotels, Infinti Retail,
+          Deepkart Advanced Systems, Deepkart Capital, Deepkart Chemicals, DeepKart
+          Communications, Deepkart Consultancy Services, Deepkart Consumer Products.
+        </p>
+      </div>
+
+
+
+      <!-- news and media -->
+
+<div *ngIf="news==true" class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          October-2021
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          September-2021
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          August-2021
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+           July-2021
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            June-2021
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            April-2021
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            March-2021
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            February-2021
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            January-2021
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <!-- company Information -->
+  <div *ngIf="comp==true">
+       <p style="margin-left: 100px;margin-right: 100px;border: 1px solid whitesmoke;border-radius: 10px;text-align: justify;">Deepkart is the nation's first large format specialist retail chain for consumer electronics and durables with successful expansion into Deepkart Zip stores, Croma Kiosks and latest online vertical,<a  class="website" routerLinkActive="active" routerLink="/home" > www.deepkart.com.</a></p>
+  </div>
+    </div>
+  </div>
+</div>
+
+
+
+

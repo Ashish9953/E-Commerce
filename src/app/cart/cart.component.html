@@ -1,0 +1,279 @@
+<!-- <ng-container *ngIf="products.length !=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                    
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.productName}}</td>
+                            <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
+                            <td style="width: 25%;">{{item.description}}</td>
+                            <th style="width: 12%;">{{item.cost}}</th>
+                            <td style="width: 12%;">{{item.quantity}}</td>
+                            <td style="width: 12%;">{{item.total}}</td> 
+                            <td>
+                                <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
+                            <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
+                            <td><button class="btn btn-success">Checkout</button></td>
+                             <td><strong>Grand Total : ${{grandTotal}}</strong></td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="products.length ==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+            <h4>Your cart is empty!</h4>
+            <h6>Add item to it now</h6>
+            <button routerLink="/products" class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+</ng-container> -->
+
+<div *ngIf="cartData.length != 0" class="container-fluid cont" style="margin-top: 0px;">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card card1">
+        <p class="myCart">My Cart({{this.cartData.length}})</p>
+
+        <hr />
+        <div *ngFor="let item of cartData">
+          <div class="row">
+            <div class="col-md-3">
+              <img
+                class="img1"
+                src="{{ item.Product.image }}"
+                alt="{{ item.Product.productName }}"
+              />
+              <br />
+              <br />
+              <div class="quantdiv">
+                
+                
+                
+                <div class="form-group">
+                  
+                  <button  class="button1"   (click)="decQuant(item)">-</button
+                    >&nbsp;&nbsp;
+                    <input type=number class=" input-box" value="{{item.quantity}}" (change)="find($event,item)" >
+                    &nbsp;&nbsp;<button class="button1" (click)="incQuant(item)">
+                      +
+                    </button>
+                </div> 
+                <!-- <input
+                  type="number"
+                  class="input-box"
+                  [(ngModel)]="quantity"
+                 (keyup)="addtojson({{quantity}},{{item.productId}})"
+                  size="10"
+                />
+                 -->
+                </div>
+            </div>
+            <div class="col-md-6 name">
+              <p class="prodname">{{ item.Product.productName }}</p>
+              <p class="cost">&#x20B9;{{ item.Product.cost }}</p>
+              <br />
+              
+              
+              <button
+                (click)="deleteCart(item)"
+                class="butt"
+              >
+                REMOVE
+              </button>
+            </div>
+
+            <!-- <div class="col-md-3"></div> -->
+          </div>
+          <hr />
+        </div>
+        
+      </div>
+
+      
+    </div>
+     
+
+      
+    <div class="col-lg-4">
+      <div class="card card2">
+        <p class="myCart">PRICE DETAILS</p>
+
+        <hr />
+        <div style="margin-left: 20px; margin-right: 20px">
+          <table class="table1">
+            <tr>
+              <td class="td1">Price({{this.cartData.length}} items)</td>
+              <td class="td0">&#x20B9; {{price}}</td>
+            </tr>
+            <tr>
+              <td class="td1">Discount</td>
+              <td class="td2">&#x20B9; {{discount}}</td>
+            </tr>
+            <tr>
+              <td class="td1">Delivery Charges</td>
+              <td class="td2">&#x20B9; {{dilivery1}}</td>
+            </tr>
+          </table>
+
+          <hr />
+
+          <table class="table1">
+            <tr>
+              <td class="amounttd1">TotalAmount</td>
+              <td class="amounttd2">&#x20B9; {{total}}</td>
+            </tr>
+          </table>
+          <hr />
+          <p class="save">You will save &#x20B9; {{discount}} on this order</p>
+        
+        <hr />
+        <div  >
+       
+         
+          <button   routerLink="/cart/checkout"class="clickorder">PLACE ORDER</button>
+           
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+
+<!-- <ng-container *ngIf="saveData.length !=0" >
+<div class="container-fluid cont">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card card1">
+        <p class="myCart">My Cart({{this.saveData}})</p>
+
+        <hr />
+        <div *ngFor="let item of saveData">
+          <div class="row">
+            <div class="col-md-3">
+              <img
+                class="img1"
+                src="{{ item.image }}"
+                alt="{{ item.productName }}"
+              />
+              <br />
+              <br />
+              <div class="quantdiv">
+                
+                
+                
+                <div class="form-group">
+                  
+                  <button  class="button1"   (click)="decQuant(item.id)">-</button
+                    >&nbsp;&nbsp;
+                    <input type=number class=" input-box" value="{{item.quantity}}" (keyup)="find($event,item.id)" >
+                    &nbsp;&nbsp;<button class="button1" (click)="incQuant(item.id)">
+                      +
+                    </button>
+                </div> 
+                 <input
+                  type="number"
+                  class="input-box"
+                  [(ngModel)]="quantity"
+                 (keyup)="addtojson({{quantity}},{{item.productId}})"
+                  size="10"
+                />
+                 
+                </div>
+            </div>
+            <div class="col-md-6 name">
+              <p class="prodname">{{ item.productName }}</p>
+              <p class="cost">&#x20B9;{{ item.cost }}</p>
+              <br />
+              <button class="butt" (click)="saveForLater(item)">SAVE FOR LATER</button
+              >&nbsp;&nbsp;&nbsp;&nbsp;
+              
+              <button
+                (click)="deleteProduct(item)"
+                class="butt"
+              >
+                REMOVE
+              </button>
+            </div>
+
+            <div class="col-md-3"></div>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+     
+
+      
+    
+  </div>
+</div>
+</ng-container> -->
+
+
+
+
+
+
+
+
+
+
+<ng-container *ngIf="cartData.length == 0 ">
+   
+  <div class="container-fluid" style="margin-bottom: 0px; margin-top: -68px;background-color:#E8E8E8 ;">
+    <div class="row">
+      <div class="col-lg-10 offset-1 card-box">
+        <img
+        class="cart"
+        src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
+        alt="empty cart"
+      
+      /> <br>
+      <h3 style="text-align: center;">Your cart is empty!</h3>
+      <h5  style="text-align: center;margin-top: -10px;">Add item to it now</h5>
+      <div class="shopnow">
+      <button routerLink="/products" class="btn btn-primary">Shop Now</button>
+    </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+   
+      
+  </div>
+</ng-container>

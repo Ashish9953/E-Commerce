@@ -1,0 +1,271 @@
+<nav class="navbar navbar-light bg-primary" style="margin-top: -70px;">
+    <div class="container-fluid">
+      <h1 style="color:aliceblue ;">Electronic Products</h1>
+      <div class="d-flex">
+        <button type="button" *ngIf="api.role=='admin'" (click)="clickAdd()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success p-2">Add Product</button>
+      </div>
+    </div>
+  </nav>
+
+  <header style="margin-top: -2%;">
+    <br>
+    <div class="navbar navbar-dark bg-success shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+          
+           
+            
+          <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="category" (keyup)="search(category)" placeholder="search products">
+            </div> 
+               &nbsp;&nbsp;
+            <i class="fas fa-search" style="font-size: 40px;"></i>
+  
+  
+        </div>
+        
+    </div>
+  </header>
+    
+   
+     
+
+ 
+
+<div class="container-fluid">
+    <div class="row">
+      <!-- sidebar -->
+      <div class="col-lg-3" style="background-color:	#E8E8E8; ">
+
+        <div style="background-color: white; margin-top: 10px;">
+           
+          <p style="padding-top: 15px ;padding-left: 15px;font-size: 17px;font-weight: 500;">Filters</p>
+          <hr>
+          <p style="padding-left: 10px;font-size: 13px;font-weight: 440;">CATEGORIES
+             <br>
+             <button *ngIf="category!=''" class="filter" (click)="deleteFilter()">{{category}} &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-trash"></i></button>
+           
+          </p>
+          <br>
+          
+          
+          
+
+        </div>
+        
+
+      </div>
+      <!-- product iteration -->
+      <div class="col-lg-9" style="background-color:	#E8E8E8;">
+        <div style="background-color: white; margin-top: 10px;">
+          <ng-container *ngFor="let item of productData ">
+               <div class="row prodrow">
+                 <div class="col-lg-4  img1" ><img src="{{item.image}}" alt=""style="padding:20px;" ></div>
+
+                   <div class="col-lg-4" style="padding:20px">
+                    <h5 class="prodname" >{{item.productName}}</h5>
+                    
+                    <span class="btn bg-success text-light rating">{{item.rating}}&nbsp;<i class="fas fa-star" style="font-size: 13px;padding-bottom: 20px;"></i></span>
+                    <p class="desc"><span style="font-weight: 500;"> Description:</span>
+                      {{item.description}}</p>
+                   </div>
+                   <div class="col-lg-3 " style="padding:20px">
+                     <div class="price">&#x20B9;{{item.cost}}</div>
+                        
+                     <button *ngIf="api.role=='user'" class="btn btn-primary addtocart" (click)=addtocart(item)>Add to cart</button>
+                     <br> <br> <br><br><br><br>
+                     <div *ngIf="api.role=='admin'"  style="float: left;"> 
+                      <button  (click)="onEdit(item)" style="color: aliceblue;width: 100px;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <button (click)="deleteProduct(item)" class="btn btn-danger" style="width: 100px;"> Delete</button>
+                   </div>
+                   </div>
+               </div>
+               <hr>
+              </ng-container>
+        </div></div>
+            
+
+      
+    </div>
+  </div>
+
+
+
+    
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <table class="table mt-3">
+    <thead style="background-color: darkgrey;">
+  
+      <tr>
+          <th scope="col" *ngFor="let product of columnI">{{product}}</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of productData">
+           
+            <td>{{row.productId }} </td>
+            <td> {{row.productName }}</td>
+            <td> {{row.cost}}</td>
+            <td>{{row.description}}</td>
+           
+             <td><img src={{row.image}}  alt="notfound"></td>
+            <td>
+              <button (click)="onEdit(row)" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+              <button (click)="deleteProduct(row)" class="btn btn-danger mx-3"> Delete</button>
+  
+            </td>
+        </tr>
+    </tbody>
+  </table>
+   -->
+    
+
+
+
+
+
+
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" >
+          <div class="modal-content" style="background-color: darkgray;">
+            <div class="modal-header" >
+              <h2 class="modal-title" id="exampleModalLabel">Products Details</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                
+              </button>
+            </div>
+            <div class="modal-body bg-info">
+
+                <div class="modal-body bg-info">
+
+    <form [formGroup]="formValue" (ngSubmit)="postProduct" enctype="multipart/form-
+    data">
+        <div *ngIf="showAdd" class="form-group">
+            <label  for="examplefproductId">Product Id</label>
+            <input
+            style="max-width: 440px;"
+              type="text"
+              class="form-control"
+              id="exampleproductId"
+              placeholder="product  ID"
+              formControlName="productId"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleproductName" >Product Name</label>
+            <input
+            style="max-width: 440px;"
+              type="text"
+              class="form-control"
+              id="exampleproductName"
+              placeholder="product name.."
+              formControlName="productName"
+            />
+          </div>
+          <div class="form-group">
+            <label for="examplelCost">Cost</label>
+            <input
+            style="max-width: 440px;"
+              type="number"
+              class="form-control"
+              id="examplelCost"
+              placeholder="cost..."
+              formControlName="cost"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleproductDesc">Product Description</label>
+            <input
+            style="max-width: 440px;"
+              type="text"
+              class="form-control"
+              id="exampleproductDesc"
+              placeholder="product Description.."
+              formControlName="description"
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="examplelrating">Rating</label>
+            <input
+            style="max-width: 440px;"
+              type="number"
+              class="form-control"
+              id="examplelrating"
+              placeholder="Rating..."
+              formControlName="rating"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleproductCategory">Product Category</label>
+            <input
+            style="max-width: 440px;"
+              type="text"
+              class="form-control"
+              id="exampleproductCategory"
+              placeholder="product category..."
+              formControlName="category"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleproductBrand">Product Brand</label>
+            <input
+            style="max-width: 440px;"
+              type="text"
+              class="form-control"
+              id="exampleproductBrand"
+              placeholder="product Brand..."
+              formControlName="brand"
+            />
+          </div>
+          <div *ngIf="showAdd" class="form-group">
+            <label for="exampleproductCategory">Product Image</label>
+            <input
+            style="max-width: 440px;"
+              type="file"
+              class="form-control"
+              id="exampleproductCategory"
+             
+              formControlName="image"
+            />
+          </div>
+
+      <br />
+      
+    </form></div>
+    <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+          <button type="button" *ngIf="showAdd" (click)="postProduct()" class="btn btn-primary">ADD</button>
+          <button type="button" *ngIf="showUpdate"  (click)="updateProductDetails()" class="btn btn-primary">UPDATE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+          
+          
+       

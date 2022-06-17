@@ -1,0 +1,264 @@
+<div class="container-fluid cont">
+  <div class="row">
+    <div class="col-lg-3 offset-1">
+      <div class="card card1" style="border: none; background-color: #f0f3ef">
+        <div class="card" style="margin: 10px; padding: 10px">
+          <p class="myCart">
+            <img
+              src="../assets/images/profile-pic-male.svg"
+              alt=""
+              style="float: left"
+            />
+
+            <span
+              style="
+                font-size: 15px;
+                color: black;
+                margin-left: 20px;
+                display: inline-block;
+                margin-top: 5px;
+              "
+            >
+              hello, <br />
+              <span style="font-weight: 700"
+                >{{ user.firstName }} {{ user.lastName }}
+              </span>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-7">
+      <div class="card card1" style="border: none; background-color: #f0f3ef">
+        <div
+          class="card"
+          style="margin: 10px; padding: 0px; margin-left: -15px"
+        >
+          <div class="myProfile">
+            <div class="heading">
+              Personal Information
+              <span *ngIf="name == false  " class="edit" (click)="onEditName()"
+                >Edit</span
+              ><span *ngIf="name == true" class="edit" (click)="onCancelName()"
+                >Cancel</span
+              >
+            </div>
+            <br />
+
+            <div>
+              <label *ngIf="name == false" class="labelbox">{{
+                user.firstName
+              }}</label>
+              <label
+                *ngIf="name == false"
+                class="labelbox"
+                style="margin-left: 10px"
+                >{{ user.lastName }}</label
+              >
+              <form [formGroup]="nameForm" (ngSubmit)="changeName()">
+                <div *ngIf="name == true" class="form-group box">
+                  <label class="label-input" for="examplefirstName" 
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control input-box"
+                    id="examplefirstName"
+                    formControlName="firstName"
+                  />
+                  <span
+                    class="text-danger"
+                    *ngIf="
+                      nameForm.controls['firstName'].touched &&
+                      nameForm.hasError('required', 'firstName')
+                    "
+                    >*First Name is required</span
+                  >
+                </div>
+                <div
+                  *ngIf="name == true"
+                  class="form-group box"
+                  style="margin-left: 10px"
+                >
+                  <label for="examplelastName" class="label-input">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control input-box"
+                    id="examplelastName"
+                    value="{{ user.lastName }}"
+                    formControlName="lastName"
+                  />
+                  <span
+                    class="text-danger"
+                    *ngIf="
+                      nameForm.controls['lastName'].touched &&
+                      nameForm.hasError('required', 'lastName')
+                    "
+                    >*Last Name is required</span
+                  >
+                </div>
+                <button
+                  *ngIf="name == true"
+                  type="submit"
+                  [disabled]="!nameForm.valid"
+                  class="btn btn-primary butt"
+                >
+                  SAVE
+                </button>
+              </form>
+
+            </div>
+      
+       
+
+        
+         <br><br><br>
+          <div class="heading">Email Address <span *ngIf="email==false" class="edit" (click)="onEditEmail()">Edit</span><span *ngIf="email==true" class="edit" (click)="onCancelEmail()">Cancel</span></div>
+          <br>
+           
+          
+              <label *ngIf="email==false" class="labelbox">{{user.email}}</label>
+           
+             <form [formGroup]="emailForm" (ngSubmit)="changeEmail()">
+                  
+                 <div  *ngIf="email==true" class="form-group box">
+                   <label class="label-input" for="exampleemail">Email Address</label>
+                   <input
+                     type="text"
+                     class="form-control input-box"
+                     id="exampleemail"
+                   
+                     formControlName="email"
+                     
+                   />
+                   <div *ngIf="emailForm.controls['email'].touched && emailForm.controls['email'].invalid" class="text-danger">  
+                    <div *ngIf="emailForm.hasError('required','email')">*Email is required.</div>  
+                    <div *ngIf="emailForm.hasError('pattern','email')">*Please, Enter correct Email</div>  
+                </div> 
+                 </div>
+                 
+
+                 <button *ngIf="email==true"  type="submit" [disabled]="!emailForm.valid" class="btn btn-primary butt">SAVE</button>
+             </form>
+             <br><br><br>
+             <div class="heading">Mobile Number <span *ngIf="mobile==false" class="edit" (click)="onEditMobile()">Edit</span><span *ngIf="mobile==true" class="edit" (click)="onCancelMobile()">Cancel</span></div>
+             <br>
+              
+             
+                 <label *ngIf="mobile==false" class="labelbox">{{user.mobile}}</label>
+              
+                <form [formGroup]="mobileForm" (ngSubmit)="changeMobile()">
+                     
+                    <div  *ngIf="mobile==true" class="form-group box">
+                      <label class="label-input" for="examplemobile">Mobile</label>
+                      <input
+                        type="text"
+                        class="form-control input-box"
+                        id="examplemobile"
+                      
+                        formControlName="mobile"
+                        
+                      />
+                      
+                    </div>
+                    <div *ngIf="mobileForm.controls['mobile'].touched && mobileForm.controls['mobile'].invalid" class="text-danger">  
+                      <div *ngIf="mobileForm.hasError('required','mobile')">*Mobile Number is required.</div>  
+                      <div *ngIf="mobileForm.hasError('pattern','mobile')">*Please, Enter 10 digit Mobile Number.</div>  
+                  </div>  
+        
+   
+                    <button *ngIf="mobile==true"  type="submit" [disabled]="!mobileForm.valid" class="btn btn-primary butt">SAVE</button>
+                </form>
+                <br><br><br>
+                <div class="heading">FAQs</div><br>
+                <p class="question">What happens when I update my email address (or mobile number)?</p>
+                <p >Your login email id (or mobile number) changes, likewise.
+                   You'll receive all your account related communication 
+                  on your updated email address (or mobile number).</p><br>
+                  <p class="question">When will my DeepKart account be updated with the new email address (or mobile number)?</p>
+                  <p >It happens as soon as you confirm the verification code sent to your email (or mobile) and save the changes.</p>
+                  <br>
+                  <p class="question">What happens to my existing Flipkart account when I update my email address (or mobile number)?</p>
+                  <p >Updating your email address (or mobile number) doesn't invalidate your account. Your account remains fully functional. You'll continue seeing your Order history, saved information and personal details.</p>
+             
+                  <br><br>
+                  
+                  <div class="heading delete"  data-bs-toggle="modal" data-bs-target="#exampleModal" style="color:#5F7FF0;">Deactivate Account</div>
+                 
+                 
+                </div>
+                <img
+                src="../assets/images/myProfileFooter_4e9fe2.png"
+                alt=""
+                style="float: left"
+              />      
+      </div>
+   
+   
+   
+   
+   
+   
+     
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      
+    <div class="modal-content">
+      <div class="row">
+        <div class="col-6">
+          <img src="../assets/images/deactivate.jpeg" alt="" height="100%" width="100%">
+          </div>
+          <div class="col-6">
+          
+        <div style="margin: 10px;padding: 10px;">
+          <p style="font-size: 18px;font-weight:500;">Are you sure you want to leave?</p> 
+          <label  class="labelbox1">{{user.email}}</label><br><br>
+          <label  class="labelbox1">{{user.mobile}}</label><br><br>
+          <div   class=" box" >
+          <input
+                     type="password"
+                     class=" input-box input1"
+                     style="height: 50px;"
+                     id="examplepassword"
+                      placeholder="Enter your password"
+                      [(ngModel)]="password"
+                     
+            /> 
+          </div>
+              
+         <br><br><br><br>
+
+         <p  class="confirm" (click)="deleteAccount()">CONFIRM DEACTIVATION<p>
+          <p  data-bs-dismiss="modal" class="cancel">NO, LET ME STAY!</p>
+      </div>
+
+      
+
+      
+       
+      
+    </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>

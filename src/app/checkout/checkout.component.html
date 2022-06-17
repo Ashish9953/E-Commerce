@@ -1,0 +1,208 @@
+<div class="container-fluid cont" style="margin-top: 0px">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card card1" style="border: none; background-color: #f0f3ef">
+        <div class="card" style="margin: 10px; padding: 10px">
+          <p class="myCart">
+            <span></span> Login <span style="color: #3f62f2">✓</span>
+            <br /><br />
+            
+            <span style="font-size: 15px; color: black"
+              > {{user.firstName}} {{user.lastName}}  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; {{user.email
+              }}  </span
+            >
+          </p>
+        </div>
+        <div class="card" style="margin: 10px; padding: 10px">
+          <p class="myCart">
+            Delivery Address <span style="color: #3f62f2">✓</span> <br /><br />
+            <span style="font-size: 15px; color: black">{{user.address}}</span>
+          </p>
+        </div>
+        <div class="card" *ngIf="summary==true;" style="margin: 10px">
+          <p
+            class="myCart"
+            style="
+              background-color: #3f62f3;
+              padding-bottom: 13px;
+              padding-left: 25px;
+              color: white;
+              padding-top: 13px;
+            "
+          >
+            ORDER SUMMARY
+          </p>
+          <div *ngFor="let item of product" style="padding-top: 10px;">
+            <div class="row">
+              <div class="col-md-3">
+                <img
+                  class="img1"
+                  src="{{ item.Product.image }}"
+                  alt="{{ item.Product.productName }}"
+                />
+                <br />
+                <br />
+                <div class="quantdiv">
+                  <div class="form-group">
+                    <button class="button1" (click)="decQuant(item)">-</button
+                    >&nbsp;&nbsp;
+                    <input
+                      type="number"
+                      class="input-box"
+                      value="{{ item.quantity}}"
+                      (change)="find($event, item)"
+                    />
+                    &nbsp;&nbsp;<button
+                      class="button1"
+                      (click)="incQuant(item)"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <!-- <input
+                    type="number"
+                    class="input-box"
+                    [(ngModel)]="quantity"
+                   (keyup)="addtojson({{quantity}},{{item.productId}})"
+                    size="10"
+                  />
+                   -->
+                </div>
+              </div>
+              <div class="col-md-6 name">
+                <p class="prodname">{{ item.Product.productName }} </p>
+                <p class="cost">&#x20B9;{{ item.Product.cost*item.quantity }}</p>
+                <br />
+
+                <button (click)="deleteCart(item)" class="butt">REMOVE</button>
+              </div>
+
+              <!-- <div class="col-md-3"></div> -->
+            </div>
+             <hr>
+
+          </div >
+           <div style="text-align: right;padding: 10px;">
+            <button type="button" class="btn btn-danger" style="margin-right: 30px;" (click)="changeSummary()">Continue</button>
+          </div>
+
+        </div>
+
+        <div class="card" *ngIf="notsummary==true"  style="margin: 10px; padding: 10px">
+          <p class="myCart">
+            <span></span> Product Summary <span style="color: #3f62f2">✓</span>
+              
+              <button type="button" class="btn " style="margin-left: 500px;background-color: grey;" (click)="changeSummary1()">Change</button>
+             
+            
+          </p>
+        </div>
+
+        <div class="card" *ngIf="notsummary==true" style="margin: 10px; padding: 10px">
+            <p class="myCart">
+              PAYMENT OPTIONS
+             </p>
+             
+             <!-- <google-pay-button 
+             environment="TEST" 
+             buttonType="buy"
+             buttonColor="black"
+             [paymentRequest]= "{
+                  apiVersion: 2,
+                  apiVersionMinor: 0,
+                 allowedPaymentMethods:[
+                  { type:'CARD',
+                     parameters:{
+                       allowedAuthMethods:['PAN_ONLY','CRYPTOGRAM_3DS'],
+                       allowedCardNetworks:['AMEX','VISA','MASTERCARD']
+                     },
+                     tokenizationSpecification:{
+                       type:'PAYMENT_GATEWAY',
+                       parameters:
+                       {
+                         gateway:'example',
+                         gatewayMerchantId:'exampleGatewayMerchantId',
+            
+                       }
+                     }
+                    }
+                ],
+                merchantInfo:
+                {
+                  merchantId:'12345678903332442',
+                  merchantName:'demo Merchant'
+                },
+                transactionInfo:
+                {
+                  totalPriceStatus:'FINAL',
+                  totalPriceLabel:'TOTAL',
+                  totalPrice:'100.00',
+                  currencyCode:'INR',
+                  countryCode:'IND'
+                }
+            }" 
+              
+              ></google-pay-button> -->
+          </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card card2">
+        <p class="myCart">PRICE DETAILS</p>
+
+        <hr />
+        <div>
+          <span
+            class="myCart"
+            style="color: black; font-size: 16px; font-weight: 400"
+            >Price({{this.cartData.length}} items)</span
+          ><span
+            class="myCart"
+            style="
+              color: black;
+              font-size: 16px;
+              font-weight: 400;
+              margin-left: 165px;
+            "
+            >&#x20B9; {{price}}</span
+          ><br /><br />
+          <span
+            class="myCart"
+            style="color: black; font-size: 16px; font-weight: 400"
+            >Delivery Charges</span
+          ><span
+            class="myCart"
+            style="
+              color: black;
+              font-size: 16px;
+              font-weight: 400;
+              margin-left: 146px;
+            "
+            >&#x20B9; {{dilivery1}}</span
+          >
+          <hr />
+          <span
+            class="myCart"
+            style="color: black; font-size: 16px; font-weight: 700"
+            >Total Payable</span
+          ><span
+            class="myCart"
+            style="
+              color: black;
+              font-size: 16px;
+              font-weight: 700;
+              margin-left: 170px;
+            "
+            >&#x20B9; {{total}} </span
+          >
+          <hr />
+          <span  class="myCart"
+          style="color: green; font-size: 16px; font-weight: 400">You will save &#x20B9; {{discount}} on this order</span> 
+           <hr>
+        </div>
+        <button   routerLink="/cart/checkout/thankyou"class="clickorder" (click)="checkout()">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>

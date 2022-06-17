@@ -1,0 +1,717 @@
+<div
+  style="background-color: white;  margin-top: -5%;border-bottom:1px solid #C9C5C5;height: 100px;"
+  class="container-fluid"
+>
+  <div class="row" >
+    <div class="col-lg offset-1 pointer">
+      <div class="cat1">
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"
+          class="card-img-top img-fluid"
+          alt="Top offers"
+        />
+        Top offers
+      </div>
+    </div>
+    <div class="col-lg pointer" routerLinkActive="active" routerLink="/products" (click)="filter('TV')">
+      <div class="cat1">
+        <img
+          src="../assets/images/televroute.jpeg"
+          class="card-img-top "
+          alt="Top offers" style="height: 50px;margin-bottom: 7px;margin-top: 5px;"
+        />
+        Television
+      </div>
+    </div>
+    <div class="col-lg pointer" routerLinkActive="active" routerLink="/products" (click)="filter('Mobile')" >
+      <div class="cat1">
+        <img
+          src="../assets/images/mobileroute.png"
+          class="card-img-top img-fluid"
+          alt="Top offers"
+        />
+        Mobiles
+      </div>
+    </div>
+    <div class="col-lg pointer" routerLinkActive="active" routerLink="/products" (click)="filter('Laptop')" >
+      <div class="cat1">
+        <img
+          src="../assets/images/laproute.jpeg"
+          class="card-img-top img-fluid"
+          alt="Top offers"
+          style="height: 50px;margin-bottom: 7px;margin-top: 5px;"
+        />
+        Laptop
+      </div>
+    </div>
+    <div class="col-lg pointer " routerLinkActive="active"routerLink="/products" (click)="filter('Camera')" >
+      <div class="cat1">
+        <img
+          src="../assets/images/camroute.jpeg"
+          class="card-img-top img-fluid"
+          alt="Top offers"
+          style="height: 50px;margin-bottom: 7px;margin-top: 5px;"
+        />
+        camera
+      </div>
+    </div>
+    <div class="col-lg pointer" routerLinkActive="active" routerLink="/products" (click)="filter('Headphone')" >
+      <div class="cat1">
+        <img
+          src="../assets/images/headproute.jpeg"
+          class="card-img-top img-fluid"
+          alt="Top offers"
+          style="height: 50px;margin-bottom: 7px;margin-top: 5px;"
+        />
+         Audio
+      </div>
+    </div>
+    <div class="col-lg pointer" routerLinkActive="active" routerLink="/products" (click)="filter('Refigrators')">
+      <div class="cat1">
+        <img
+          src="../assets/images/fridgeroute.jpeg"
+          class="card-img-top img-fluid"
+          alt="Top offers"
+          style="height: 50px;margin-bottom: 7px;margin-top: 5px;"
+        />
+        Refigrators
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../assets/images/crou1.jpeg" alt="Los Angeles" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/images/crou2.jpeg" alt="Chicago" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/images/crou3.jpeg" alt="New York" class="d-block w-100">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" style="border: 1px solid black;height: 100px;width: 50px;background-color: skyblue;color: black;margin-left: -170px;"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon" style="border: 1px solid black;height: 100px;width: 50px;background-color: skyblue;color: black;margin-right: -170px;"></span>
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div
+  id="carouselExampleCaptions"
+  class="carousel slide"
+  data-bs-ride="carousel"
+  style="margin-top: 0px"
+>
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="../assets/images/crousel1.jpg"
+        class="d-block w-100"
+       
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Led Android Tv</h5>
+        <p>
+          High resolution Adsun 80 cm (32 inch) HD Ready LED Smart TV (A-3200S).
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="../assets/images/crousel2.jpg"
+        class="d-block w-100"
+        
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Mobile at DeepKart</h5>
+        <p>Buy all types of mobile in exciting price</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="../assets/images/crousel3.jpg"
+        class="d-block w-100"
+        
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Canon Camera</h5>
+        <p>Canon EOS 1500D DSLR Camera Body+ 18-55 mm IS II Lens (Black)</p>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+<!-- Card -->
+<div class="container-fluid div2" >
+  <nav class="navbar navbar-light " >
+    <div class="container-fluid">
+      <p style="font-size: 25px;font-weight: 450;" >Latest Products</p>
+      <div class="d-flex">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  routerLinkActive="active" routerLink="/products" class="btn btn-primary ">VIEW ALL</button>
+      </div>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col-lg-2">
+      <div class="card" >
+         
+        <img
+          class="card-img-top card1"
+          src="{{ product[product.length - 1].image }}"
+          alt="Card image cap"
+          
+        />
+        <div class="card-body">
+          <p class="card-body1">
+            {{ lastThreeProduct[lastThreeProduct.length - 1].productName }}
+          </p>
+
+          <p class="card-text">
+            
+             Rating :{{ lastThreeProduct[lastThreeProduct.length - 1].rating }}
+          </p>
+          <p class="card-text1">
+            Price : Rs.{{ lastThreeProduct[lastThreeProduct.length - 1].cost }}
+          </p>
+          <div>
+            <button
+            *ngIf="user.show == true && user.role=='user'"
+              (click)="
+                addtocart(lastThreeProducts[lastThreeProduct.length - 1])
+              "
+              type="button"
+              class="btn btn-primary"
+            >
+              Add to Cart
+            </button>
+            <!--<button *ngIf="show==true" (click)="onEdit(lastThreeData[0])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                   <button *ngIf="show==true" (click)="deleteProduct(lastThreeData[0])" class="btn btn-danger mx-3"> Delete</button>
+                 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="card" >
+      
+        <img
+          class="card-img-top card1"
+          src="{{ lastThreeProduct[lastThreeProduct.length - 2].image }}"
+          alt="Card image cap"
+         
+        />
+        <div class="card-body">
+          <p class="card-body1">
+            {{ lastThreeProduct[lastThreeProduct.length - 2].productName }}
+          </p>
+
+          <p class="card-text">
+            Rating :{{ lastThreeProduct[lastThreeProduct.length - 2].rating }}
+          </p>
+          <p class="card-text1">
+            Price : Rs.{{ lastThreeProduct[lastThreeProduct.length - 2].cost }}
+          </p>
+          <div>
+            <button
+            *ngIf="user.show == true && user.role=='user'"
+              (click)="
+                addtocart(lastThreeProducts[lastThreeProduct.length - 2])
+              "
+              type="button"
+              class="btn btn-primary"
+            >
+              Add to Cart
+            </button>
+            <!-- <button *ngIf="show==true" (click)="onEdit(lastThreeProduct[1])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                 <button *ngIf="show==true" (click)="deleteProduct(lastThreeProduct[1])" class="btn btn-danger mx-3"> Delete</button>
+      -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2">
+      <div class="card" >
+        
+        <img
+          class="card-img-top card1"
+          src="{{ lastThreeProduct[lastThreeProduct.length - 3].image }}"
+          alt="Card image cap"
+         
+        />
+        <div class="card-body">
+          <p class="card-body1">
+            {{ lastThreeProduct[lastThreeProduct.length - 3].productName }}
+          </p>
+
+          <p class="card-text">
+            Rating :{{ lastThreeProduct[lastThreeProduct.length - 3].rating }}
+          </p>
+          <p class="card-text1">
+            Price : Rs.{{ lastThreeProduct[lastThreeProduct.length - 3].cost }}
+          </p>
+          <div>
+            <button
+            *ngIf="user.show == true && user.role=='user'"
+              (click)="
+                addtocart(lastThreeProducts[lastThreeProduct.length - 3])
+              "
+              type="button"
+              class="btn btn-primary"
+            >
+              Add to Cart
+            </button>
+            <!-- <button *ngIf="show==true" (click)="onEdit(lastThreeData[0])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+               <button *ngIf="show==true" (click)="deleteProduct(lastThreeData[0])" class="btn btn-danger mx-3"> Delete</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-lg-2">
+      <div class="card" >
+       
+        <img
+          class="card-img-top card1"
+          src="{{ lastThreeProduct[lastThreeProduct.length - 4].image }}"
+          alt="Card image cap"
+        
+          
+        />
+        <div class="card-body">
+          <p class=card-body1>
+            {{ lastThreeProduct[lastThreeProduct.length - 4].productName }}
+          </p>
+
+          <p class="card-text">
+            Rating :{{ lastThreeProduct[lastThreeProduct.length - 4].rating }}
+          </p>
+          <p class="card-text1">
+            Price : Rs.{{ lastThreeProduct[lastThreeProduct.length - 4].cost }}
+          </p>
+          <div>
+            <button
+            *ngIf="user.show == true && user.role=='user'"
+              (click)="
+                addtocart(lastThreeProducts[lastThreeProduct.length - 4])
+              "
+              type="button"
+              class="btn btn-primary"
+            >
+              Add to Cart
+            </button>
+            <!--<button *ngIf="show==true" (click)="onEdit(lastThreeData[0])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                   <button *ngIf="show==true" (click)="deleteProduct(lastThreeData[0])" class="btn btn-danger mx-3"> Delete</button>
+                 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="card" >
+        
+        <img
+          class="card-img-top card1"
+          src="{{ lastThreeProduct[lastThreeProduct.length - 5].image }}"
+          alt="Card image cap"
+         
+        />
+        <div class="card-body">
+          <p class="card-body1">
+            {{ lastThreeProduct[lastThreeProduct.length - 5].productName }}
+          </p>
+
+          <p class="card-text">
+            Rating :{{ lastThreeProduct[lastThreeProduct.length - 5].rating }}
+          </p>
+          <p class="card-text1">
+            Price : Rs.{{ lastThreeProduct[lastThreeProduct.length - 5].cost }}
+          </p>
+          <div>
+            <button
+            *ngIf="user.show == true && user.role=='user'"
+              (click)="
+                addtocart(lastThreeProducts[lastThreeProduct.length - 5])
+              "
+              type="button"
+              class="btn btn-primary"
+            >
+              Add to Cart
+            </button>
+            <!-- <button *ngIf="show==true" (click)="onEdit(lastThreeProduct[1])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                 <button *ngIf="show==true" (click)="deleteProduct(lastThreeProduct[1])" class="btn btn-danger mx-3"> Delete</button>
+      -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="card">
+       
+        <img
+          class="card-img-top card1"
+          src="{{ lastThreeProduct[lastThreeProduct.length - 6].image }}"
+          alt="Card image cap"
+          
+        />
+        <div class="card-body">
+          <p class="card-body1">
+            {{ lastThreeProduct[lastThreeProduct.length - 6].productName }}
+          </p>
+
+          <p class="card-text">
+            Rating :{{ lastThreeProduct[lastThreeProduct.length - 6].rating }}
+          </p>
+          <p class="card-text1">
+            Price : Rs.{{ lastThreeProduct[lastThreeProduct.length - 6].cost }}
+          </p>
+          <div>
+            <button
+            *ngIf="user.show == true && user.role=='user'"
+              (click)="
+                addtocart(lastThreeProducts[lastThreeProduct.length - 6])
+              "
+              type="button"
+              class="btn btn-primary"
+            >
+              Add to Cart
+            </button>
+            <!-- <button *ngIf="show==true" (click)="onEdit(lastThreeData[0])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+               <button *ngIf="show==true" (click)="deleteProduct(lastThreeData[0])" class="btn btn-danger mx-3"> Delete</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <hr>
+
+<!-- <-top rated products -->
+  <div class="container-fluid div2" >
+    <nav class="navbar navbar-light " >
+      <div class="container-fluid">
+        <p style="font-size: 25px;font-weight: 450;" >Top Rated Products</p>
+        <div class="d-flex">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  routerLinkActive="active" routerLink="/products" class="btn btn-primary ">VIEW ALL</button>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="card" >
+           
+          <img
+            class="card-img-top card1"
+            src="{{ lastThreeProduct[0].image }}"
+            alt="Card image cap"
+            
+          />
+          <div class="card-body">
+            <p class="card-body1">
+              {{ lastThreeProduct[0].productName }}
+            </p>
+  
+            <p class="card-text">
+              
+               Rating :{{ lastThreeProduct[0].rating }}
+            </p>
+            <p class="card-text1">
+              Price : Rs.{{ lastThreeProduct[0].cost }}
+            </p>
+            <div>
+              <button
+              *ngIf="user.show == true && user.role=='user'"
+                (click)="
+                  addtocart(lastThreeProducts[0])
+                "
+                type="button"
+                class="btn btn-primary"
+              >
+                Add to Cart
+              </button>
+              <!--<button *ngIf="show==true" (click)="onEdit(lastThreeData[0])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                     <button *ngIf="show==true" (click)="deleteProduct(lastThreeData[0])" class="btn btn-danger mx-3"> Delete</button>
+                   -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card" >
+        
+          <img
+            class="card-img-top card1"
+            src="{{ lastThreeProduct[1].image }}"
+            alt="Card image cap"
+           
+          />
+          <div class="card-body">
+            <p class="card-body1">
+              {{ lastThreeProduct[1].productName }}
+            </p>
+  
+            <p class="card-text">
+              Rating :{{ lastThreeProduct[1].rating }}
+            </p>
+            <p class="card-text1">
+              Price : Rs.{{ lastThreeProduct[1].cost }}
+            </p>
+            <div>
+              <button
+              *ngIf="user.show == true && user.role=='user'"
+                (click)="
+                  addtocart(lastThreeProducts[1])
+                "
+                type="button"
+                class="btn btn-primary"
+              >
+                Add to Cart
+              </button>
+              <!-- <button *ngIf="show==true" (click)="onEdit(lastThreeProduct[1])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                   <button *ngIf="show==true" (click)="deleteProduct(lastThreeProduct[1])" class="btn btn-danger mx-3"> Delete</button>
+        -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      
+  
+      <div class="col-lg-2">
+        <div class="card" >
+          
+          <img
+            class="card-img-top card1"
+            src="{{ lastThreeProduct[2].image }}"
+            alt="Card image cap"
+           
+          />
+          <div class="card-body">
+            <p class="card-body1">
+              {{ lastThreeProduct[2].productName }}
+            </p>
+  
+            <p class="card-text">
+              Rating :{{ lastThreeProduct[2].rating }}
+            </p>
+            <p class="card-text1">
+              Price : Rs.{{ lastThreeProduct[2].cost }}
+            </p>
+            <div>
+              <button
+              *ngIf="user.show == true && user.role=='user'"
+                (click)="
+                  addtocart(lastThreeProducts[2])
+                "
+                type="button"
+                class="btn btn-primary"
+              >
+                Add to Cart
+              </button>
+              <!-- <button *ngIf="show==true" (click)="onEdit(lastThreeData[0])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                 <button *ngIf="show==true" (click)="deleteProduct(lastThreeData[0])" class="btn btn-danger mx-3"> Delete</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-2">
+        <div class="card" >
+         
+          <img
+            class="card-img-top card1"
+            src="{{ lastThreeProduct[3].image }}"
+            alt="Card image cap"
+          
+            
+          />
+          <div class="card-body">
+            <p class=card-body1>
+              {{ lastThreeProduct[3].productName }}
+            </p>
+  
+            <p class="card-text">
+              Rating :{{ lastThreeProduct[3].rating }}
+            </p>
+            <p class="card-text1">
+              Price : Rs.{{ lastThreeProduct[3].cost }}
+            </p>
+            <div>
+              <button
+              *ngIf="user.show == true && user.role=='user'"
+                (click)="
+                  addtocart(lastThreeProducts[3])
+                "
+                type="button"
+                class="btn btn-primary"
+              >
+                Add to Cart
+              </button>
+              <!--<button *ngIf="show==true" (click)="onEdit(lastThreeData[0])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                     <button *ngIf="show==true" (click)="deleteProduct(lastThreeData[0])" class="btn btn-danger mx-3"> Delete</button>
+                   -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card" >
+          
+          <img
+            class="card-img-top card1"
+            src="{{ lastThreeProduct[4].image }}"
+            alt="Card image cap"
+           
+          />
+          <div class="card-body">
+            <p class="card-body1">
+              {{ lastThreeProduct[4].productName }}
+            </p>
+  
+            <p class="card-text">
+              Rating :{{ lastThreeProduct[4].rating }}
+            </p>
+            <p class="card-text1">
+              Price : Rs.{{ lastThreeProduct[4].cost }}
+            </p>
+            <div>
+              <button
+              *ngIf="user.show == true && user.role=='user'"
+                (click)="
+                  addtocart(lastThreeProducts[4])
+                "
+                type="button"
+                class="btn btn-primary"
+              >
+                Add to Cart
+              </button>
+              <!-- <button *ngIf="show==true" (click)="onEdit(lastThreeProduct[1])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                   <button *ngIf="show==true" (click)="deleteProduct(lastThreeProduct[1])" class="btn btn-danger mx-3"> Delete</button>
+        -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card">
+         
+          <img
+            class="card-img-top card1"
+            src="{{ lastThreeProduct[5].image }}"
+            alt="Card image cap"
+            
+          />
+          <div class="card-body">
+            <p class="card-body1">
+              {{ lastThreeProduct[5].productName }}
+            </p>
+  
+            <p class="card-text">
+              Rating :{{ lastThreeProduct[5].rating }}
+            </p>
+            <p class="card-text1">
+              Price : Rs.{{ lastThreeProduct[5].cost }}
+            </p>
+            <div>
+              <button
+              *ngIf="user.show == true && user.role=='user'"
+                (click)="
+                  addtocart(lastThreeProducts[5])
+                "
+                type="button"
+                class="btn btn-primary"
+              >
+                Add to Cart
+              </button>
+              <!-- <button *ngIf="show==true" (click)="onEdit(lastThreeData[0])" style="color: aliceblue;" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                 <button *ngIf="show==true" (click)="deleteProduct(lastThreeData[0])" class="btn btn-danger mx-3"> Delete</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- again cards  -->
+

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=M+PLUS+1&family=M+PLUS+Code+Latin&family=Pacifico&family=Poppins:wght@400;500&family=Yuji+Mai&display=swap');
+h2{
+    font-family: 'M PLUS 1', sans-serif;
+}
+p{
+    font-size: 14px;
+    color: rgb(100, 100, 100);
+}
+.website
+{
+    text-decoration: none;
+}
+.about
+{    font-size: 16px;
+}
+.about:hover
+{
+    color: black;
+}

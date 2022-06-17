@@ -1,0 +1,143 @@
+.cont
+{   
+    background-color: #F0F3EF;
+}
+.card1
+{
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card2
+{   margin-left: -10px;
+    margin-right: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.myCart
+{   color:#9F9999 ;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-weight: 450;
+}
+.img1{
+     height: 150px;
+     width: 100%;
+    padding-left: 30px;
+}
+.quantdiv
+{
+    padding-left: 30px;
+    font-size: 15px;
+}
+.button1{
+    border-radius: 50%;
+    background-color: white;
+}
+.input-box
+{  height: 30px;
+   width: 80px;
+   text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.name
+{
+    overflow:hidden;
+}
+.prodname
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 450;
+    font-size: 15px;
+}
+.cost
+{
+    font-size: 20px;
+    font-weight: 500;
+}
+.butt
+{
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: white;
+    
+}
+.butt:hover{
+    color: blue;
+}
+.table1
+{
+    width: 100%;
+    
+}
+.td1
+{  font-size: 16px;
+   text-align: left; 
+   padding: 10px;
+   padding-left: 0px;
+}
+.td2
+{
+    font-size: 16px;
+    
+    color: green;
+    padding: 10px;
+    text-align: center;
+    padding-left: 0px;
+}
+.td0
+{
+    font-size: 16px;
+    
+    
+    padding: 10px;
+    text-align: center;
+    padding-left: 0px; 
+}
+.amounttd1
+{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left; 
+    padding: 10px;
+    padding-left: 0px;
+}
+.amounttd2
+{
+    font-size: 20px;
+    
+    font-weight: 500;
+    padding: 10px;
+    text-align: end;
+    padding-left: 0px; 
+    padding-right: 30px; 
+}
+.save
+{
+    font-size: 16px;
+    color: green;
+
+}
+.clickorder
+{
+    float: right;
+    color: white;
+    background-color: blue;
+    text-align: center;
+    margin-bottom: 10px;
+    
+    font-size: 20px;
+    padding: 10px;
+    margin-left:150px;
+    width: 200px;
+  
+}
