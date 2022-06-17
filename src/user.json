@@ -1,0 +1,401 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "productId": "Sam24338",
+      "productName": "SAMSUNG 80 cm (32 inch) HD Ready LED Smart TV  (UA32T4340AKXXL / UA32T4340BKXXL)",
+      "cost": 49999,
+      "description": "Take your entertainment to the next level with this Samsung TV. With the Content Guide on this TV, you now have access to content from the top-rated TV shows. ",
+      "image": "../assets/images/samsung.jpeg",
+      "rating": 4.3,
+      "category": "TV",
+      "brand": "Samsung"
+    },
+    {
+      "id": 2,
+      "productId": "Sam435678",
+      "productName": "Samsung M12 Sport (Carbon Black, 64 GB)  (4 GB RAM)",
+      "cost": 20000,
+      "description": "13MP Rear Camera Setup (f/2.2, 1.0μm Pixel Size, PDAF), HDR, Portrait, AI Scene Detection, Kaleidoscope, Filters, Pro Mode,Accelerometer, Light Sensor, Proximity Sensor",
+      "image": "../assets/images/redmi1.webp",
+      "rating": 4.4,
+      "category": "Mobile",
+      "brand": "Samsung"
+    },
+    {
+      "id": 3,
+      "productId": "Apple435678",
+      "productName": "APPLE iPhone SE (Black, 64 GB",
+      "cost": 69000,
+      "description": "12MP Wide Camera,Splash, Water and Dust Resistant (IP67 Rated (Maximum Depth of 1 metre Upto 30 mins) Under IEC Standard 60529), Fingerprint Sensor Built into the Home Hutton.",
+      "image": "../assets/images/applemob.jpeg",
+      "rating": 4.4,
+      "category": "Mobile",
+      "brand": "Apple"
+    },
+    {
+      "id": 4,
+      "productId": "Red436789",
+      "productName": "Redmi 9 (Sky Blue, 4GB RAM, 64GB Storage) | 2.3GHz Mediatek Helio",
+      "cost": 16000,
+      "description": "48MP quad rear camera, ultra-wide, macro mode, portrait, ai scene recognition, night mode, hdr, pro mode | 8MP front camera, 16.58 centimeters (6.53 inch) FHD+ pixels resolution.",
+      "image": "../assets/images/redmimobile1 (1).jpg",
+      "rating": 4.3,
+      "category": "Mobile",
+      "brand": "Redmi"
+    },
+    {
+      "id": 5,
+      "productId": "Can6353",
+      "productName": "Canon EOS 3000D DSLR Camera 1 Camera Body, 18 - 55 mm Lens  (Black)",
+      "cost": 63999,
+      "description": "If you are a photography enthusiast, then the Canon EOS 3000D DSLR Camera is a must-have gadget. Featuring an 18 MP (APS-C) CMOS sensor and the DIGIC 4+ imaging processor. ",
+      "image": "../assets/images/camera.jpeg",
+      "rating": 4.5,
+      "category": "Camera",
+      "brand": "Canon"
+    },
+    {
+      "id": 6,
+      "productId": "Asus676522",
+      "productName": "ASUS VivoBook Ultra 14 Core i5 11th Gen - (8 GB/512 GB SSD/Windows 10 Home)",
+      "cost": 82999,
+      "description": "Bring home this ASUS X413EA laptop that features the IceBlades fan and a heat pipe that are part of the ASUS Intelligent Performance Technology (AIPT) that is designed to keep this laptop cool. ",
+      "image": "../assets/images/asus.jpeg",
+      "rating": 4,
+      "category": "Laptop",
+      "brand": "Asus"
+    },
+    {
+      "id": 7,
+      "productId": "MI24338",
+      "productName": "Mi 5X 108 cm (43 inch) Ultra HD (4K) LED Smart Android TV",
+      "cost": 39999,
+      "description": "The sleek and powerful Mi TV 5X is an ideal home entertainment option for your classy. This appliance features a Premium Metal Bezel-less Design for a distraction-free visual experience.",
+      "image": "../assets/images/mitv.jpeg",
+      "rating": 3.9,
+      "category": "TV",
+      "brand": "Redmi"
+    },
+    {
+      "id": 8,
+      "productId": "Sony24338",
+      "productName": "Sony Bravia X80J Series 139cm (55 Inch) Ultra HD 4K LED",
+      "cost": 49999,
+      "description": "Works With Google Assistant, Alexa, Apple HomeKit/Apple Airplay, Object-Based HDR Remaster analyzes and adjusts the colour in individual objects on the screen",
+      "image": "../assets/images/sonytv2.jpeg",
+      "rating": 3.9,
+      "category": "TV",
+      "brand": "Sony"
+    },
+    {
+      "id": 9,
+      "productId": "MI24338",
+      "productName": "APPLE Macbook Pro M1 Pro Chip M1 Pro ",
+      "cost": 249999,
+      "description": "16.2 inch Liquid Retina XDR display, Native resolution at 254 pixels per inch, Up to 1,000 nits sustained (full-screen) brightness, 1,600 nits peak brightness,ontrast ratio",
+      "image": "../assets/images/laptopapple.jpeg",
+      "rating": 4.3,
+      "category": "Laptop",
+      "brand": "Apple"
+    },
+    {
+      "id": 10,
+      "productId": "SONY33442",
+      "productName": "SONY Cyber-shot DSC-RX100M3 ",
+      "cost": 29999,
+      "description": "uperior Auto, Intelligent Auto, Program Auto (Program Shift Available),10 Elements in 9 Groups (9 Aspheric Elements Including AA Lens)",
+      "image": "../assets/images/sonycam.jpeg",
+      "rating": 4.5,
+      "category": "Camera",
+      "brand": "Sony"
+    },
+    {
+      "id": 11,
+      "productId": "Dell94633",
+      "productName": "DELL Athlon Dual Core 3050U - (4 GB/256 GB SSD/Windows 10)",
+      "cost": 45999,
+      "description": "SD Media Card Reader (SD, SDHC, SDXC),Built-in Dual Speakers,English International Non Backlit Keyboard",
+      "image": "../assets/images/dell.jpeg",
+      "rating": 4.2,
+      "category": "Laptop",
+      "brand": "Asus"
+    },
+    {
+      "id": 12,
+      "productId": "GO456353",
+      "productName": "GoPro Hero9 Sports and Action Camera  (Black, 23.6 MP)",
+      "cost": 19999,
+      "description": "A GoPro is a handy, portable, and durable action camera that can be mounted to your head, helmet, bike handlebars.",
+      "image": "../assets/images/gocam.jpeg",
+      "rating": 4.6,
+      "category": "Camera",
+      "brand": "Woodman"
+    },
+    {
+      "id": 13,
+      "productId": "SONY636322",
+      "productName": "SONY WH-CH510 Google Assistant enabled Bluetooth Headset  (Black, On the Ear)",
+      "cost": 3199,
+      "description": "Conversations and music flow seamlessly with these lightweight and compact headphones from Sony that come equipped with a microphone and Bluetooth technology. ",
+      "image": "../assets/images/headsony.jpeg",
+      "rating": 4.4,
+      "category": "Headphone"
+    },
+    {
+      "id": 14,
+      "productId": "Boat333322",
+      "productName": "boAt Airdopes 131 Bluetooth Headset  (Active Black, True Wireless)",
+      "cost": 1199,
+      "description": "Are you looking for a wireless earbud-type headset that delivers an impressive playback time? If your answer is yes, bring home the boAt Airdopes 131 that comes with a carrying case.",
+      "image": "../assets/images/boat.jpeg",
+      "rating": 4.8,
+      "category": "Headphone"
+    },
+    {
+      "id": 15,
+      "productId": "MI333322",
+      "productName": "Mi Super Bass Bluetooth Headset  (Black, Red, On the Ear)",
+      "cost": 1599,
+      "description": " Enjoy up to 20 hours of battery life and you can use the headphones either as wired or wireless based on your convinience. ",
+      "image": "../assets/images/headmi.jpeg",
+      "rating": 4.1,
+      "category": "Headphone"
+    },
+    {
+      "id": 16,
+      "productId": "SAM634533",
+      "productName": "SAMSUNG 253 L Frost Free Double Door 3 Star Refrigerator  (Elegant Inox, RT28A3453S8/HL)",
+      "cost": 17999,
+      "description": "You can keep your perishables fresh and ready for consumption inside the Samsung 253 L refrigerator (RT28A3021S8/HL) which provides efficient cooling while saving energy and keeping the operational noise level to a minimum. ",
+      "image": "",
+      "rating": 4.1,
+      "parentCategory": "",
+      "category": "Refrigrator"
+    }
+  ],
+  "signUpUsers": [
+    {
+      "firstName": "dsghhgds",
+      "lastName": "eudgdgd",
+      "password": "635rerwrdd",
+      "number": 78632663,
+      "email": "sabhvsv@gmail.com",
+      "location": "gdshdfdfds",
+      "id": 1
+    },
+    {
+      "firstName": "gdsgdhd",
+      "lastName": "dhgds",
+      "password": "ejhkdkjjkjdj",
+      "number": null,
+      "email": "dgdgsd",
+      "location": "ejewggdgd",
+      "id": 2
+    },
+    {
+      "firstName": "Ashish ",
+      "lastName": "Kumar",
+      "password": "Ashish@123",
+      "number": 9953013565,
+      "email": "ashishku9953@gmail.com",
+      "location": "Delhi",
+      "id": 3
+    },
+    {
+      "firstName": "A K",
+      "lastName": "Choudhary",
+      "password": "Ashish@123",
+      "number": 7982062819,
+      "email": "amar964388@gmail.com",
+      "location": "Delhi",
+      "admin": "",
+      "id": 4
+    },
+    {
+      "firstName": "Rajan",
+      "lastName": "Pandey",
+      "password": "3873563446",
+      "number": 393732635,
+      "email": "jhhddfghfd",
+      "location": "jhghjdfjdhf",
+      "admin": true,
+      "id": 5
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "password": "",
+      "number": "",
+      "email": "",
+      "location": "",
+      "admin": "",
+      "id": 6
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "password": "",
+      "number": "",
+      "email": "",
+      "location": "",
+      "admin": "",
+      "id": 7
+    },
+    {
+      "firstName": "Ashish K",
+      "lastName": "Choudhary",
+      "password": "Ashish@123",
+      "number": 87365635423,
+      "email": "ashishku@gmail.com",
+      "location": "delhi",
+      "admin": true,
+      "id": 8
+    },
+    {
+      "firstName": "hhcghjd",
+      "lastName": "hcgjdc",
+      "password": "737367",
+      "number": null,
+      "email": "dsjhdjghdj",
+      "location": "hduhdjgfu",
+      "admin": "",
+      "id": 9
+    },
+    {
+      "firstName": "shdgdegeyuee",
+      "lastName": "hdjhdhgdd",
+      "password": "Ashish@123",
+      "number": 7365364534,
+      "email": "jdhjghgyudfjgd@gmail.com",
+      "location": "Delhi",
+      "admin": "Hello@Ashish",
+      "id": 10
+    },
+    {
+      "firstName": "Amar Kumar",
+      "lastName": "Choud",
+      "password": "",
+      "number": "",
+      "email": "",
+      "location": "",
+      "admin": "",
+      "id": 11
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "password": "",
+      "number": "",
+      "email": "",
+      "location": "",
+      "admin": "",
+      "id": 12
+    },
+    {
+      "firstName": "Ashish kumar",
+      "lastName": "Choudhary",
+      "password": "hshjgdftd",
+      "number": 99654783767,
+      "email": "hsgdd63653",
+      "location": "ydgdtettd",
+      "admin": "hello@Ashish",
+      "id": 13
+    }
+  ],
+  "admin": [
+    {
+      "firstName": "jhweg",
+      "lastName": "jehjhdgs",
+      "password": "jdshgd",
+      "number": 293883,
+      "email": "hghcg",
+      "location": "u3647",
+      "admin": "",
+      "id": 1
+    },
+    {
+      "firstName": "ueuyeu",
+      "lastName": "dhgdhjd",
+      "password": "jkhdjg",
+      "number": 83736743,
+      "email": "jsdhjhdgj",
+      "location": "736735",
+      "admin": true,
+      "id": 2
+    },
+    {
+      "firstName": "Ashish Kumar",
+      "lastName": "Choudhary",
+      "password": "Ashish@123",
+      "number": 3676363363543,
+      "email": "ashishku995301@gmail.com",
+      "location": "73635634s",
+      "admin": true,
+      "id": 3
+    },
+    {
+      "firstName": "Rajan",
+      "lastName": "Pandey",
+      "password": "3873563446",
+      "number": 393732635,
+      "email": "jhhddfghfd",
+      "location": "jhghjdfjdhf",
+      "admin": true,
+      "id": 4
+    },
+    {
+      "firstName": "Ashish K",
+      "lastName": "Choudhary",
+      "password": "Ashish@123",
+      "number": 87365635423,
+      "email": "ashishku@gmail.com",
+      "location": "delhi",
+      "admin": true,
+      "id": 5
+    },
+    {
+      "firstName": "Ashish kumar",
+      "lastName": "Choudhary",
+      "password": "hshjgdftd",
+      "number": 99654783767,
+      "email": "hsgdd63653",
+      "location": "ydgdtettd",
+      "admin": "hello@Ashish",
+      "id": 6
+    },
+    {
+      "firstName": "meghana",
+      "lastName": "A",
+      "password": "23456789",
+      "number": 6357526576,
+      "email": "m@gmail.com",
+      "location": "bangalore",
+      "admin": "hello@Ashish",
+      "id": 7
+    }
+  ],
+  "contact": [
+    {
+      "name": "Ashish ",
+      "email": "amar964388@gmail.com",
+      "mobile": "87467646563",
+      "problem": "check contact us",
+      "id": 1
+    }
+  ],
+  "cart": [],
+  "saveforlater": [
+    {
+      "id": 6,
+      "productId": "Asus676522",
+      "productName": "ASUS VivoBook Ultra 14 Core i5 11th Gen - (8 GB/512 GB SSD/Windows 10 Home)",
+      "cost": 82999,
+      "description": "Bring home this ASUS X413EA laptop that features the IceBlades fan and a heat pipe that are part of the ASUS Intelligent Performance Technology (AIPT) that is designed to keep this laptop cool. ",
+      "image": "../assets/images/asus.jpeg",
+      "rating": 4,
+      "category": "Laptop",
+      "quantity": 1
+    }
+  ]
+}
